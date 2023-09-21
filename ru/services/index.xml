@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Services on Koresh Tony Website</title>
+    <link>https://koreshtony.com/ru/services/</link>
+    <description>Recent content in Services on Koresh Tony Website</description>
+    <generator></generator>
+    <language>ru-ua</language>
+    <lastBuildDate>Mon, 15 Jun 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://koreshtony.com/ru/services/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>music</title>
+      <link>https://koreshtony.com/ru/services/music/</link>
+      <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://koreshtony.com/ru/services/music/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>clips</title>
+      <link>https://koreshtony.com/ru/services/clips/</link>
+      <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://koreshtony.com/ru/services/clips/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>promo</title>
+      <link>https://koreshtony.com/ru/services/promo/</link>
+      <pubDate>Sun, 14 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://koreshtony.com/ru/services/promo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>movies</title>
+      <link>https://koreshtony.com/ru/services/movies/</link>
+      <pubDate>Thu, 28 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://koreshtony.com/ru/services/movies/</guid>
+      <description></description>
+    </item>
+     
+  </channel>
+</rss>
