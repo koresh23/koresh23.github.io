@@ -1,127 +1,152 @@
 <!DOCTYPE html>
 <html lang="en-us" class="smooth-scroll">
   <head>
-    <!-- Добавлены современные шрифты -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    
-    <!-- Обновленная цветовая схема -->
     <style>
-      :root {
-        --primary: #3498db;    /* Яркий синий */
-        --secondary: #2c3e50;  /* Темно-синий */
-        --accent: #e74c3c;     /* Акцентный красный */
-        --light: #ecf0f1;      /* Светлый фон */
-        --dark: #2c3e50;       /* Темный фон */
-        --transition: all 0.3s ease;
+      /* Глобальные исправления */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
       }
-
+      
       body {
         font-family: 'Open Sans', sans-serif;
         line-height: 1.6;
         color: #333;
-        background-color: #f9f9f9;
+        background-color: #fafafa;
         overflow-x: hidden;
       }
 
-      h1, h2, h3, h4, h5, h6 {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 700;
-        color: var(--secondary);
+      #blog {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
       }
 
-      a {
-        color: var(--primary);
-        text-decoration: none;
-        transition: var(--transition);
-      }
-
-      a:hover {
-        color: var(--accent);
-      }
-
-      /* Улучшенное меню */
+      /* Исправленный хедер */
       #header {
-        background: rgba(255, 255, 255, 0.97);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        padding: 15px 0;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(8px);
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+        padding: 15px 5%;
         position: sticky;
         top: 0;
         z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
       }
 
       .header-title {
         font-size: 1.8rem;
         font-weight: 700;
-        color: var(--secondary);
+        color: #2c3e50;
+        font-family: 'Montserrat', sans-serif;
       }
 
-      /* Главный баннер */
-      .postShorten--thumbnailimg-top .postShorten-thumbnailimg {
-        border-radius: 12px;
+      .header-right-picture {
+        display: flex;
+        align-items: center;
+      }
+
+      .header-picture {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #3498db;
+      }
+
+      /* Контентная область */
+      #main {
+        padding: 40px 0;
+      }
+
+      .postShorten-wrap {
+        background: white;
+        border-radius: 16px;
         overflow: hidden;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        max-height: 500px;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+        margin-bottom: 40px;
+        transition: transform 0.3s ease;
       }
 
-      .postShorten--thumbnailimg-top .postShorten-thumbnailimg:hover {
+      .postShorten-wrap:hover {
         transform: translateY(-5px);
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .postShorten-thumbnailimg {
+        height: 400px;
+        width: 100%;
+        object-fit: cover;
+        display: block;
       }
 
       .postShorten-header {
-        padding: 30px 0 15px;
+        padding: 30px;
       }
 
       .postShorten-title {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
         margin-bottom: 20px;
-        line-height: 1.2;
-        color: var(--secondary);
+        color: #2c3e50;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
       }
 
       .postShorten-excerpt {
+        padding: 0 30px 30px;
         font-size: 1.1rem;
         line-height: 1.8;
         color: #555;
-        max-width: 800px;
-        margin: 0 auto;
       }
 
-      /* Кнопки и CTA */
-      .cta-button {
-        display: inline-block;
-        background: var(--accent);
-        color: white !important;
-        padding: 14px 28px;
-        border-radius: 50px;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin: 25px 10px 15px 0;
-        box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
-        transition: var(--transition);
+      .postShorten-excerpt p {
+        margin-bottom: 20px;
       }
 
-      .cta-button:hover {
-        background: #c0392b;
-        transform: translateY(-3px);
-        box-shadow: 0 7px 20px rgba(231, 76, 60, 0.4);
+      /* Секция криптовалют */
+      .crypto-section {
+        background: linear-gradient(135deg, #2c3e50 0%, #1a2530 100%);
         color: white;
+        padding: 30px;
+        border-radius: 12px;
+        margin: 40px 0;
+      }
+
+      .crypto-section h3 {
+        color: white;
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      .crypto-address {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 15px;
+        border-radius: 8px;
+        margin: 15px 0;
+        font-family: monospace;
+        word-break: break-all;
+        font-size: 0.9rem;
       }
 
       /* Секция партнеров */
       #partners {
-        background: var(--light);
-        padding: 60px 0;
-        margin: 60px 0;
-        border-radius: 12px;
+        background: #f8f9fa;
+        padding: 50px 20px;
+        margin: 60px 0 30px;
+        border-radius: 16px;
+        text-align: center;
       }
 
       #partners .section-heading {
         font-size: 2rem;
         margin-bottom: 40px;
+        color: #2c3e50;
+        font-family: 'Montserrat', sans-serif;
         position: relative;
         display: inline-block;
       }
@@ -134,13 +159,30 @@
         transform: translateX(-50%);
         width: 60px;
         height: 3px;
-        background: var(--accent);
+        background: #e74c3c;
+      }
+
+      .partners-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .partner-item {
+        flex: 0 0 calc(20% - 30px);
+        min-width: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       .img-inline {
         max-height: 80px;
+        max-width: 100%;
         transition: transform 0.3s ease;
-        margin: 15px 20px;
         filter: grayscale(100%);
         opacity: 0.7;
       }
@@ -151,95 +193,37 @@
         opacity: 1;
       }
 
-      /* Блок с крипто-адресами */
-      .crypto-section {
-        background: linear-gradient(135deg, var(--secondary) 0%, var(--dark) 100%);
-        color: white;
-        padding: 40px;
-        border-radius: 12px;
-        margin: 40px 0;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-      }
-
-      .crypto-section h3 {
-        color: white;
-        font-size: 1.8rem;
-        margin-bottom: 25px;
+      /* Кнопки */
+      .cta-button {
+        display: inline-block;
+        background: #e74c3c;
+        color: white !important;
+        padding: 14px 32px;
+        border-radius: 50px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin: 25px 0;
+        box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+        transition: all 0.3s ease;
         text-align: center;
+        font-size: 1rem;
+        border: none;
+        cursor: pointer;
       }
 
-      .crypto-address {
-        background: rgba(255, 255, 255, 0.1);
-        padding: 15px;
-        border-radius: 8px;
-        margin: 10px 0;
-        font-family: monospace;
-        word-break: break-all;
-        transition: background 0.3s ease;
-      }
-
-      .crypto-address:hover {
-        background: rgba(255, 255, 255, 0.15);
-      }
-
-      /* Адаптивность */
-      @media (max-width: 768px) {
-        .postShorten-title {
-          font-size: 2rem;
-        }
-        
-        .postShorten-excerpt {
-          font-size: 1rem;
-          padding: 0 15px;
-        }
-        
-        .crypto-section {
-          padding: 25px 15px;
-        }
-        
-        #partners .container-fluid {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-        }
-        
-        .img-inline {
-          max-height: 60px;
-          margin: 10px;
-        }
-      }
-
-      /* Анимации */
-      @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
-      }
-
-      .postShorten-wrap, #partners, .crypto-section {
-        animation: fadeIn 0.6s ease-out forwards;
-      }
-
-      /* Улучшенный футер */
-      #footer {
-        background: var(--secondary);
-        color: white;
-        padding: 30px 0;
-        text-align: center;
-        margin-top: 60px;
-      }
-
-      /* Оверлей "О себе" */
-      #about-card {
-        border-radius: 12px;
-        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+      .cta-button:hover {
+        background: #c0392b;
+        transform: translateY(-3px);
+        box-shadow: 0 7px 20px rgba(231, 76, 60, 0.4);
       }
 
       /* Социальные иконки */
       .social-icons {
         display: flex;
         justify-content: center;
-        gap: 20px;
-        margin-top: 20px;
+        gap: 15px;
+        margin: 30px 0;
       }
 
       .social-icons a {
@@ -248,38 +232,118 @@
         justify-content: center;
         width: 50px;
         height: 50px;
-        background: var(--primary);
+        background: #3498db;
         color: white;
         border-radius: 50%;
-        font-size: 1.5rem;
-        transition: var(--transition);
+        font-size: 1.3rem;
+        transition: all 0.3s ease;
       }
 
       .social-icons a:hover {
-        background: var(--accent);
+        background: #2980b9;
         transform: translateY(-5px);
+      }
+
+      /* Футер */
+      #footer {
+        background: #2c3e50;
+        color: white;
+        padding: 30px 0;
+        text-align: center;
+        margin-top: 60px;
+        border-radius: 16px 16px 0 0;
+      }
+
+      /* Адаптивность */
+      @media (max-width: 992px) {
+        .postShorten-title {
+          font-size: 2rem;
+        }
+        
+        .partner-item {
+          flex: 0 0 calc(25% - 30px);
+        }
+      }
+
+      @media (max-width: 768px) {
+        #header {
+          padding: 12px 5%;
+        }
+        
+        .postShorten-thumbnailimg {
+          height: 300px;
+        }
+        
+        .postShorten-header {
+          padding: 20px;
+        }
+        
+        .postShorten-title {
+          font-size: 1.8rem;
+        }
+        
+        .postShorten-excerpt {
+          padding: 0 20px 20px;
+          font-size: 1rem;
+        }
+        
+        .crypto-section {
+          padding: 20px 15px;
+        }
+        
+        .partner-item {
+          flex: 0 0 calc(33.333% - 30px);
+        }
+      }
+
+      @media (max-width: 576px) {
+        .header-title {
+          font-size: 1.5rem;
+        }
+        
+        .postShorten-thumbnailimg {
+          height: 250px;
+        }
+        
+        .postShorten-title {
+          font-size: 1.6rem;
+        }
+        
+        .partner-item {
+          flex: 0 0 calc(50% - 30px);
+        }
+        
+        .cta-button {
+          width: 100%;
+          padding: 12px;
+        }
       }
     </style>
   </head>
 
-  <!-- Остальная часть кода остается без изменений, но с добавленными улучшениями: -->
-
   <body>
     <div id="blog">
       <header id="header" data-behavior="1">
-        <!-- ... существующий код хедера ... -->
+        <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+        <div class="header-title">
+          <a class="header-title-link" href="https://koreshtony.com/" aria-label="Go to homepage">Koresh Tony</a>
+        </div>
+        
+        <a class="header-right-picture" href="https://koreshtony.com/#about" aria-label="Open the link: /#about">
+          <img class="header-picture" src="//koreshtony.com/images/Koresh_Tony-90.png" alt="Koresh Tony" />
+        </a>
       </header>
 
-      <!-- ... существующий код сайдбара ... -->
+      <nav id="sidebar" data-behavior="1">
+        <!-- ... существующий код сайдбара ... -->
+      </nav>
 
-      <div id="main">
+      <div id="main" data-behavior="1" class="hasCoverMetaIn">
         <section class="postShorten-group main-content-wrap">
           <article class="postShorten postShorten--thumbnailimg-top">
             <div class="postShorten-wrap">
               <a href="https://koreshtony.com/" aria-label="Open the post: Welcome to Koresh Tony">
-                <div class="postShorten-thumbnailimg">
-                  <img alt="Koresh Tony" src="//koreshtony.com/images/Koresh_Tony-750.jpg"/>
-                </div>
+                <img class="postShorten-thumbnailimg" alt="Koresh Tony" src="//koreshtony.com/images/Koresh_Tony-750.jpg"/>
               </a>
               
               <div class="postShorten-header">
@@ -331,11 +395,34 @@
                 </div>
               </div>
             </div>
-            
-            <section id="partners">
-              <!-- ... существующий код партнеров ... -->
-            </section>
           </article>
+          
+          <section id="partners">
+            <div class="container">
+              <div class="row no-gutter">
+                <div class="col-md-12 text-center">
+                  <h2 class="section-heading">Trusted Partners</h2>
+                </div>
+              </div>
+            </div>
+            <div class="partners-container">
+              <div class="partner-item">
+                <a href="https://nova-coin.org/" target="_blank"><img src="//koreshtony.com/images/nvc.jpg" class="img-inline" alt="NovaCoin"></a>
+              </div>
+              <div class="partner-item">
+                <a href="https://42-coin.org/" target="_blank"><img src="//koreshtony.com/images/42.jpg" class="img-inline" alt="42-coin"></a>
+              </div>
+              <div class="partner-item">
+                <a href="https://deutsche-emark.org/" target="_blank"><img src="//koreshtony.com/images/dem.jpg" class="img-inline" alt="Deutsche eMark"></a>
+              </div>
+              <div class="partner-item">
+                <a href="https://www.theqrl.org/" target="_blank"><img src="//koreshtony.com/images/qrl.jpg" class="img-inline" alt="Quantum Resistant Ledger"></a>
+              </div>
+              <div class="partner-item">
+                <a href="https://www.peercoin.net/" target="_blank"><img src="//koreshtony.com/images/ppc.jpg" class="img-inline" alt="Peercoin"></a>
+              </div>
+            </div>
+          </section>
         </section>
         
         <footer id="footer" class="main-content-wrap">
@@ -355,17 +442,19 @@
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
           e.preventDefault();
-          document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-          });
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
         });
       });
       
-      // Анимация при загрузке
-      document.addEventListener('DOMContentLoaded', function() {
-        setTimeout(function() {
-          document.body.classList.add('loaded');
-        }, 200);
+      // Фикс для мобильного меню
+      document.getElementById('btn-open-sidebar').addEventListener('click', function() {
+        document.body.classList.toggle('sidebar-open');
       });
     </script>
   </body>
