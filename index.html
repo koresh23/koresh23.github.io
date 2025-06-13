@@ -1,9 +1,57 @@
 <!DOCTYPE html>
 <html lang="en-us" class="smooth-scroll">
   <head>
+    <script type="application/ld+json">
+    {  
+      "@context":"http://schema.org",
+      "@type":"Website",
+      "@id":"https:\/\/koreshtony.com",
+      "author": {
+        "@type": "Person",
+        "name": "Koresh Tony",
+        "image": "//koreshtony.com/images/Koresh_Tony-442.jpg"
+      },
+      "name":"Koresh Tony Website",
+      "description":"Koresh Tony",
+      "url":"https:\/\/koreshtony.com\/",
+      "keywords":"[]"
+    }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="Koresh Tony Website">
+    <meta name="author" content="Koresh Tony">
+    <meta name="keywords" content="">
+    <meta name="description" content="Koresh Tony">
+    <meta property="og:description" content="Koresh Tony">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Koresh Tony Website">
+    <meta name="twitter:title" content="Koresh Tony Website">
+    <meta property="og:url" content="https://koreshtony.com/">
+    <meta property="twitter:url" content="https://koreshtony.com/">
+    <meta property="og:site_name" content="Koresh Tony Website">
+    <meta property="og:description" content="Koresh Tony">
+    <meta name="twitter:description" content="Koresh Tony">
+    <meta property="og:locale" content="en-us">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@thibaudlepretre">
+    <meta name="twitter:creator" content="@thibaudlepretre">
+    <meta property="og:image" content="//koreshtony.com/images/Koresh_Tony-442.jpg">
+    <meta property="twitter:image" content="//koreshtony.com/images/Koresh_Tony-442.jpg">
+
+    <title>Koresh Tony Website</title>
+
+    <link rel="icon" href="https://koreshtony.com/favicon.png">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="https://koreshtony.com/index.xml">
+    <link rel="publisher" href="https://plus.google.com/&#43;thibaudlepretre">
+    <link rel="canonical" href="https://koreshtony.com/">
+    
+    <!-- Шрифты и иконки -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
     <style>
-      /* Глобальные исправления */
       * {
         box-sizing: border-box;
         margin: 0;
@@ -24,7 +72,7 @@
         padding: 0 20px;
       }
 
-      /* Исправленный хедер */
+      /* Хедер */
       #header {
         background: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(8px);
@@ -106,6 +154,25 @@
         margin-bottom: 20px;
       }
 
+      .postShorten-excerpt ul {
+        margin: 20px 0;
+        padding-left: 30px;
+      }
+
+      .postShorten-excerpt li {
+        margin-bottom: 10px;
+        position: relative;
+      }
+
+      .postShorten-excerpt li:before {
+        content: "•";
+        color: #e74c3c;
+        font-size: 1.2rem;
+        position: absolute;
+        left: -20px;
+        top: 1px;
+      }
+
       /* Секция криптовалют */
       .crypto-section {
         background: linear-gradient(135deg, #2c3e50 0%, #1a2530 100%);
@@ -131,6 +198,71 @@
         font-family: monospace;
         word-break: break-all;
         font-size: 0.9rem;
+      }
+
+      /* Секция навигационных кнопок */
+      .section-nav {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+        margin: 60px 0;
+      }
+
+      .nav-card {
+        background: white;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        transition: all 0.4s ease;
+        text-align: center;
+        position: relative;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .nav-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+      }
+
+      .nav-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        background: linear-gradient(90deg, #3498db, #e74c3c);
+      }
+
+      .nav-card i {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        color: #3498db;
+        transition: color 0.3s ease;
+      }
+
+      .nav-card:hover i {
+        color: #e74c3c;
+      }
+
+      .nav-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 10px;
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      .nav-description {
+        color: #666;
+        font-size: 0.95rem;
+        max-width: 80%;
+        margin: 0 auto;
       }
 
       /* Секция партнеров */
@@ -210,6 +342,7 @@
         font-size: 1rem;
         border: none;
         cursor: pointer;
+        text-decoration: none;
       }
 
       .cta-button:hover {
@@ -237,6 +370,7 @@
         border-radius: 50%;
         font-size: 1.3rem;
         transition: all 0.3s ease;
+        text-decoration: none;
       }
 
       .social-icons a:hover {
@@ -254,6 +388,28 @@
         border-radius: 16px 16px 0 0;
       }
 
+      /* Анимации */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .nav-card {
+        animation: fadeInUp 0.6s ease-out forwards;
+        opacity: 0;
+      }
+
+      .nav-card:nth-child(1) { animation-delay: 0.1s; }
+      .nav-card:nth-child(2) { animation-delay: 0.2s; }
+      .nav-card:nth-child(3) { animation-delay: 0.3s; }
+      .nav-card:nth-child(4) { animation-delay: 0.4s; }
+
       /* Адаптивность */
       @media (max-width: 992px) {
         .postShorten-title {
@@ -262,6 +418,10 @@
         
         .partner-item {
           flex: 0 0 calc(25% - 30px);
+        }
+        
+        .section-nav {
+          grid-template-columns: repeat(2, 1fr);
         }
       }
 
@@ -317,6 +477,14 @@
           width: 100%;
           padding: 12px;
         }
+        
+        .section-nav {
+          grid-template-columns: 1fr;
+        }
+        
+        .nav-card {
+          height: 180px;
+        }
       }
     </style>
   </head>
@@ -335,7 +503,59 @@
       </header>
 
       <nav id="sidebar" data-behavior="1">
-        <!-- ... существующий код сайдбара ... -->
+        <div class="sidebar-container">
+          <li class="sidebar-button">
+            <a class="sidebar-button-link " href="https://koreshtony.com/ru" title="RU">
+              <i class="sidebar-button-icon fas fa-lg fa-language" aria-hidden="true"></i>
+              <span class="sidebar-button-desc"></span>
+            </a>
+          </li>
+            
+          <div class="sidebar-profile">
+            <a href="https://koreshtony.com/#about" aria-label="Read more about the author">
+              <img class="sidebar-profile-picture" src="//koreshtony.com/images/Koresh_Tony-110.png" alt="" />
+            </a>
+            <h4 class="sidebar-profile-name">Koresh Tony</h4>
+            <h5 class="sidebar-profile-bio">Style in every rhyme, power in every word!</h5>
+          </div>
+        
+          <ul class="sidebar-buttons">
+            <li class="sidebar-button">
+              <a class="sidebar-button-link " href="https://koreshtony.com/" title="Home">
+                <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+                <span class="sidebar-button-desc">Home</span>
+              </a>
+            </li>
+
+            <li class="sidebar-button">
+              <a class="sidebar-button-link " href="https://koreshtony.com/services" title="Services">
+                <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+                <span class="sidebar-button-desc">Services</span>
+              </a>
+            </li>
+  
+            <li class="sidebar-button">
+              <a class="sidebar-button-link " href="https://koreshtony.com/image-gallery" title="image-gallery">
+                <i class="sidebar-button-icon fas fa-lg fa-image" aria-hidden="true"></i>
+                <span class="sidebar-button-desc">Gallery</span>
+              </a>
+            </li>
+  
+            <li class="sidebar-button">
+              <a class="sidebar-button-link " href="https://koreshtony.com/biography" title="biography">
+                <i class="sidebar-button-icon fas fa-lg fa-address-card" aria-hidden="true"></i>
+                <span class="sidebar-button-desc">Biography</span>
+              </a>
+            </li>
+
+            <li class="sidebar-button">
+              <a class="sidebar-button-link " href="https://koreshtony.com/#about" title="About">
+                <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+                <span class="sidebar-button-desc">Contact</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </nav>
 
       <div id="main" data-behavior="1" class="hasCoverMetaIn">
@@ -383,7 +603,7 @@
                   </a>
                 </div>
                 
-                <a href="#contact" class="cta-button">Start Your Project</a>
+                <a href="https://koreshtony.com/#about" class="cta-button">Start Your Project</a>
                 
                 <div class="crypto-section">
                   <h3>Support My Creative Work</h3>
@@ -397,6 +617,34 @@
             </div>
           </article>
           
+          <!-- Навигационные кнопки -->
+          <div class="section-nav">
+            <a href="https://koreshtony.com/services" class="nav-card">
+              <i class="fas fa-microphone-alt"></i>
+              <h3 class="nav-title">Services</h3>
+              <p class="nav-description">Explore my creative services and offerings</p>
+            </a>
+            
+            <a href="https://koreshtony.com/image-gallery" class="nav-card">
+              <i class="fas fa-images"></i>
+              <h3 class="nav-title">Gallery</h3>
+              <p class="nav-description">View my portfolio and creative works</p>
+            </a>
+            
+            <a href="https://koreshtony.com/biography" class="nav-card">
+              <i class="fas fa-book-open"></i>
+              <h3 class="nav-title">Biography</h3>
+              <p class="nav-description">Learn about my journey and background</p>
+            </a>
+            
+            <a href="https://koreshtony.com/#about" class="nav-card">
+              <i class="fas fa-envelope"></i>
+              <h3 class="nav-title">Contact</h3>
+              <p class="nav-description">Get in touch for collaborations</p>
+            </a>
+          </div>
+          
+          <!-- Секция партнеров -->
           <section id="partners">
             <div class="container">
               <div class="row no-gutter">
@@ -434,9 +682,33 @@
     </div>
     
     <div id="about">
-      <!-- ... существующий код about ... -->
+      <div id="about-card">
+        <div id="about-btn-close">
+          <i class="fa fa-times"></i>
+        </div>
+        
+        <img id="about-card-picture" src="//koreshtony.com/images/Koresh_Tony-110.png" alt="Koresh Tony" />
+        
+        <h4 id="about-card-name">Koresh Tony</h4>
+        <div id="about-card-bio">Style in every rhyme, power in every word!</div>
+        
+        <div id="about-card-job">
+          <i class="fab fa-telegram-plane"></i> / <i class="fab fa-twitter"></i>
+          <br/>
+          @koresh_tony
+        </div>
+  
+        <div id="about-card-location">
+          <i class="fa fa-envelope"></i>
+          <br/>
+          koreshmc@mail.ru
+        </div>
+      </div>
     </div>
+
+    <div id="cover" style="background-image:url('https://koreshtony.com/images/cover.jpg');"></div>
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
       // Плавная прокрутка
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -452,9 +724,20 @@
         });
       });
       
-      // Фикс для мобильного меню
-      document.getElementById('btn-open-sidebar').addEventListener('click', function() {
-        document.body.classList.toggle('sidebar-open');
+      // Анимация для кнопок при загрузке
+      document.addEventListener('DOMContentLoaded', function() {
+        // Инициализация анимации кнопок
+        const navCards = document.querySelectorAll('.nav-card');
+        navCards.forEach(card => {
+          card.style.opacity = '0';
+        });
+        
+        // Запуск анимации с небольшой задержкой
+        setTimeout(() => {
+          navCards.forEach(card => {
+            card.style.animationPlayState = 'running';
+          });
+        }, 300);
       });
     </script>
   </body>
