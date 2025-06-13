@@ -213,7 +213,7 @@
       </div>
     </div>
 
-    <!-- Добавлена ссылка на Discord в этом блоке -->
+    <!-- Раздел Contact с Telegram, Twitter, Discord и Email -->
     <div id="about">
       <div id="about-card">
         <div id="about-btn-close">
@@ -222,21 +222,29 @@
         <img id="about-card-picture" src="//koreshtony.com/images/Koresh_Tony-110.png" alt="" />
         <h4 id="about-card-name">Koresh Tony</h4>
         <div id="about-card-bio">Style in every rhyme, power in every word!</div>
-        <div id="about-card-job">
-          <i class="fab fa-telegram-plane"></i> / <i class="fab fa-twitter"></i>
-          <br/>
-          @koresh_tony
+        
+        <!-- Telegram -->
+        <div class="contact-item">
+          <i class="fab fa-telegram-plane"></i>
+          <a href="https://t.me/koresh_tony" target="_blank">Telegram</a>
         </div>
-        <div id="about-card-location">
-          <i class="fa fa-envelope"></i>
-          <br/>
-          koreshmc@mail.ru
+        
+        <!-- Twitter -->
+        <div class="contact-item">
+          <i class="fab fa-twitter"></i>
+          <a href="https://twitter.com/koresh_tony" target="_blank">Twitter</a>
         </div>
-        <!-- Добавленный блок Discord -->
-        <div id="about-card-discord">
+        
+        <!-- Discord -->
+        <div class="contact-item">
           <i class="fab fa-discord"></i>
-          <br/>
           <a href="https://discordapp.com/users/474130857129541632" target="_blank">Discord</a>
+        </div>
+        
+        <!-- Email -->
+        <div class="contact-item">
+          <i class="fa fa-envelope"></i>
+          <a href="mailto:koreshmc@mail.ru">koreshmc@mail.ru</a>
         </div>
       </div>
     </div>
@@ -247,6 +255,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://koreshtony.com/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+    <style>
+      /* Стили для улучшения отображения контактов */
+      .contact-item {
+        margin: 10px 0;
+        font-size: 16px;
+      }
+      .contact-item i {
+        width: 24px;
+        margin-right: 8px;
+      }
+      .contact-item a {
+        color: #2c3e50;
+        text-decoration: none;
+      }
+      .contact-item a:hover {
+        text-decoration: underline;
+      }
+    </style>
 
     <script>
     $(document).ready(function() {
