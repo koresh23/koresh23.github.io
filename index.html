@@ -178,16 +178,19 @@
                 <!-- Добавлен DASH -->
                 <b>DASH</b>: Xf9A3PWDjzQnYTSYknQRC1rtPCDKzBJFbk
                 <br>
+                <br>
                 
-                <!-- НОВАЯ КНОПКА ПОКУПКИ ТОКЕНА -->
-                <div class="token-purchase-section">
+                <!-- ДОБАВЛЕН ПРИЗЫВ К ПОКУПКЕ ТОКЕНА -->
+                <div class="token-support-section">
+                  <h3>Buy my token - support me!</h3>
+                  <p>Show your support by purchasing my exclusive token:</p>
                   <a href="https://app.cauldron.quest/swap/134cdfcfb477bf3b797975b6dd9fb38ff90adb1d2c50b6c3d3007539da070165" 
                      target="_blank" 
                      class="buy-token-button">
-                    <i class="fas fa-coins"></i> Purchase My Token
+                    <i class="fas fa-coins"></i> Buy Token Now
                   </a>
                 </div>
-                <!-- КОНЕЦ КНОПКИ -->
+                <!-- КОНЕЦ ДОБАВЛЕНИЯ -->
                 
                 <br>
                 <br>
@@ -323,21 +326,37 @@
         transform: scale(1.1);
       }
 
-      /* НОВЫЕ СТИЛИ ДЛЯ КНОПКИ ПОКУПКИ ТОКЕНА */
-      .token-purchase-section {
-        margin: 30px 0 20px;
+      /* СТИЛИ ДЛЯ СЕКЦИИ ПОКУПКИ ТОКЕНА */
+      .token-support-section {
+        margin: 40px 0;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
         text-align: center;
+        border: 1px solid rgba(255, 204, 0, 0.3);
+      }
+      
+      .token-support-section h3 {
+        font-size: 24px;
+        margin-bottom: 15px;
+        color: #ffcc00;
+      }
+      
+      .token-support-section p {
+        margin-bottom: 20px;
+        font-size: 18px;
       }
       
       .buy-token-button {
         display: inline-block;
-        padding: 12px 25px;
+        margin-top: 10px;
+        padding: 15px 30px;
         background: linear-gradient(to right, #ffcc00, #ff9900);
         color: #000;
         text-decoration: none;
         border-radius: 50px;
         font-weight: bold;
-        font-size: 16px;
+        font-size: 18px;
         transition: all 0.3s ease;
         box-shadow: 0 4px 15px rgba(255, 204, 0, 0.3);
         border: 2px solid #ffcc00;
@@ -350,7 +369,7 @@
       }
       
       .buy-token-button i {
-        margin-right: 8px;
+        margin-right: 10px;
       }
     </style>
 
