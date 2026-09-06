@@ -175,25 +175,25 @@
                 <br>
                 <b>DEM</b>: NXEHZZNKvdAwr8ZWRh43o4LEMftU52d8TR
                 <br>
-                <!-- Добавлен DASH -->
                 <b>DASH</b>: Xf9A3PWDjzQnYTSYknQRC1rtPCDKzBJFbk
                 <br>
                 <br>
-                
-                <!-- ДОБАВЛЕН ПРИЗЫВ К ПОКУПКЕ ТОКЕНА -->
+
+                <!-- TOKEN BUY SECTION -->
                 <div class="token-support-section">
-                  <h3>Buy my token - support me!</h3>
-                  <p>This is my <strong>official token on pump.fun</strong>. Show your support by purchasing it directly:</p>
-                  <a href="https://pump.fun/coin/GXRhooFB2QHeDmgQhmAMYSsTAVVMQ2osdTBpWfXWpump" 
-                     target="_blank" 
+                  <div class="token-badge">Official Token</div>
+                  <h3>Buy my token — support me!</h3>
+                  <p>This is my <strong>official token, listed on Robinhood Launchpad</strong>. Show your support by purchasing it directly:</p>
+                  <a href="https://www.ponsfamily.com/launchpad/0xDAa16c05F8DE048dB14581a74529438b9ac2e37B"
+                     target="_blank"
                      rel="noopener noreferrer"
                      class="buy-token-button">
                     <i class="fas fa-coins"></i> Buy Token Now
                   </a>
-                  <p class="token-address-note">Contract: GXRhooFB2QHeDmgQhmAMYSsTAVVMQ2osdTBpWfXWpump</p>
+                  <p class="token-address-note">Contract: 0xDAa16c05F8DE048dB14581a74529438b9ac2e37B</p>
                 </div>
-                <!-- КОНЕЦ ДОБАВЛЕНИЯ -->
-                
+                <!-- END TOKEN BUY SECTION -->
+
                 <br>
                 <br>
                 <br>
@@ -234,7 +234,7 @@
       </div>
     </div>
 
-    <!-- Раздел Contact с Telegram, Twitter, Discord и Email -->
+    <!-- Contact section: Telegram, Twitter, Discord, Email -->
     <div id="about">
       <div id="about-card">
         <div id="about-btn-close">
@@ -243,26 +243,22 @@
         <img id="about-card-picture" src="//koreshtony.com/images/Koresh_Tony-110.png" alt="" />
         <h4 id="about-card-name">Koresh Tony</h4>
         <div id="about-card-bio">Style in every rhyme, power in every word!</div>
-        
-        <!-- Telegram -->
+
         <div class="contact-item">
           <i class="fab fa-telegram-plane"></i>
           <a href="https://t.me/koresh_tony" target="_blank">Telegram</a>
         </div>
-        
-        <!-- Twitter -->
+
         <div class="contact-item">
           <i class="fab fa-twitter"></i>
           <a href="https://twitter.com/koresh_tony" target="_blank">Twitter</a>
         </div>
-        
-        <!-- Discord -->
+
         <div class="contact-item">
           <i class="fab fa-discord"></i>
           <a href="https://discordapp.com/users/474130857129541632" target="_blank">Discord</a>
         </div>
-        
-        <!-- Email -->
+
         <div class="contact-item">
           <i class="fa fa-envelope"></i>
           <a href="mailto:koreshmc@mail.ru">koreshmc@mail.ru</a>
@@ -278,7 +274,6 @@
     <script src="https://koreshtony.com/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
 
     <style>
-      /* Стили для улучшения отображения контактов */
       .contact-item {
         margin: 10px 0;
         font-size: 16px;
@@ -294,13 +289,12 @@
       .contact-item a:hover {
         text-decoration: underline;
       }
-      
-      /* Стили для логотипов партнеров */
+
       .partners-container {
         text-align: center;
         padding: 20px 0;
       }
-      
+
       .partners-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
@@ -310,56 +304,78 @@
         justify-content: center;
         align-items: center;
       }
-      
+
       .partners-grid a {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 70px;
       }
-      
+
       .partners-grid img {
         max-height: 60px;
         max-width: 100%;
         transition: transform 0.3s ease;
       }
-      
+
       .partners-grid img:hover {
         transform: scale(1.1);
       }
 
-      /* СТИЛИ ДЛЯ СЕКЦИИ ПОКУПКИ ТОКЕНА */
+      /* TOKEN BUY SECTION STYLES */
       .token-support-section {
-        margin: 40px 0;
-        padding: 20px;
-        background-color: rgba(255, 255, 255, 0.1);
-        border-radius: 10px;
+        position: relative;
+        margin: 40px auto;
+        padding: 32px 24px;
+        max-width: 480px;
+        background: linear-gradient(160deg, rgba(20, 20, 25, 0.85), rgba(35, 30, 15, 0.85));
+        border-radius: 16px;
         text-align: center;
-        border: 1px solid rgba(255, 204, 0, 0.3);
+        border: 1px solid rgba(255, 204, 0, 0.35);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
       }
-      
+
+      .token-badge {
+        display: inline-block;
+        margin-bottom: 14px;
+        padding: 4px 14px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #1a1a1a;
+        background: linear-gradient(to right, #ffcc00, #ff9900);
+        border-radius: 20px;
+      }
+
       .token-support-section h3 {
         font-size: 24px;
-        margin-bottom: 15px;
+        margin: 0 0 15px;
         color: #ffcc00;
+        letter-spacing: 0.5px;
       }
-      
+
       .token-support-section p {
         margin-bottom: 20px;
-        font-size: 18px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #f0f0f0;
       }
 
       .token-support-section .token-address-note {
-        margin-top: 15px;
-        font-size: 13px;
-        color: rgba(255,255,255,0.6);
+        margin-top: 18px;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.55);
         word-break: break-all;
+        font-family: monospace;
       }
-      
+
       .buy-token-button {
-        display: inline-block;
-        margin-top: 10px;
-        padding: 15px 30px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 6px;
+        padding: 15px 34px;
         background: linear-gradient(to right, #ffcc00, #ff9900);
         color: #000;
         text-decoration: none;
@@ -367,18 +383,18 @@
         font-weight: bold;
         font-size: 18px;
         transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(255, 204, 0, 0.3);
+        box-shadow: 0 4px 15px rgba(255, 204, 0, 0.35);
         border: 2px solid #ffcc00;
       }
-      
+
       .buy-token-button:hover {
         transform: translateY(-3px);
-        box-shadow: 0 6px 20px rgba(255, 204, 0, 0.5);
+        box-shadow: 0 6px 22px rgba(255, 204, 0, 0.55);
         background: linear-gradient(to right, #ff9900, #ffcc00);
       }
-      
+
       .buy-token-button i {
-        margin-right: 10px;
+        font-size: 18px;
       }
     </style>
 
